@@ -11,7 +11,7 @@ payable contract ResturantVote =
       url            : string,
 
       name           : string,
-
+      description    : string,
       voteCount      : int }
 
 
@@ -42,9 +42,9 @@ payable contract ResturantVote =
 
 
 
-  stateful entrypoint registerResturant(url' : string, name' : string) =
+  stateful entrypoint registerResturant(url' : string, name' : string, description': string) =
 
-    let resturant = { creatorAddress = Call.caller, url = url', name = name', voteCount = 0}
+    let resturant = { creatorAddress = Call.caller, url = url', name = name',description=description' ,voteCount = 0}
 
     let index = getResturantsLength() + 1
 
@@ -76,7 +76,7 @@ payable contract ResturantVote =
 
 //Address of the meme voting smart contract on the testnet of the aeternity blockchain
 
-const contractAddress = 'ct_BTMaT1V63x6XfEZMnwLesBKpQ5yLBxtZJTVknLMG5ZQgXV9Ta';
+const contractAddress = 'ct_2ceit8Uc2kSeFuh9eResSxvCughi4puamST66f8owhKWTMHkhY';
 
 //Create variable for client so it can be used in different functions
 
@@ -181,7 +181,7 @@ window.addEventListener('load', async () => {
   //Assign the value of meme length to the global variable
 
   resturantsLength = await callStatic('getResturantsLength', []);
-
+  console.log("Length Of Restaurant:",resturantsLength)
 
 
   //Loop over every meme to get all their relevant information
