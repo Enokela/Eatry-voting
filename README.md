@@ -1,2 +1,2 @@
-# Resturant-voting
-This site is created on the aeternity blockchain, it is a very simple easy to use fun aepp where users upload their favourite resturants or fast food places and vote on them using the AE tokens
+School smart contract
+this is a new website for school manangement, students would have to pay their tuition fees before they are granted access to the whole content on the site.
