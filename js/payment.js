@@ -8,7 +8,7 @@ var firebaseConfig =
     storageBucket: "school-management-2019-2a9bb.appspot.com",
     messagingSenderId: "217528902443",
     appId: "1:217528902443:web:8a9c182e73a13901d29b6e",
-    measurementId: "G-TB0KTM967H"
+  
   };
 
   // Initialize Firebase
